@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/amtg/src-gen" creationIcons="false" editDirectory="/amtg.edit/src-gen"
+    editorDirectory="/amtg.editor/src-gen" modelPluginID="amtg" modelName="Amtg" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>amtg.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="Amtg" disposableProviderFactory="true" ecorePackage="amtg.ecore#/">
+    <genClasses ecoreClass="amtg.ecore#//TestCase">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute amtg.ecore#//TestCase/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference amtg.ecore#//TestCase/testmethod"/>
+    </genClasses>
+    <genClasses ecoreClass="amtg.ecore#//TestMethod">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute amtg.ecore#//TestMethod/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference amtg.ecore#//TestMethod/mockobject"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference amtg.ecore#//TestMethod/expectation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference amtg.ecore#//TestMethod/functioncall"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference amtg.ecore#//TestMethod/realobject"/>
+    </genClasses>
+    <genClasses ecoreClass="amtg.ecore#//MockObject">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute amtg.ecore#//MockObject/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute amtg.ecore#//MockObject/type"/>
+    </genClasses>
+    <genClasses ecoreClass="amtg.ecore#//Expectation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute amtg.ecore#//Expectation/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute amtg.ecore#//Expectation/parameter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute amtg.ecore#//Expectation/methodName"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference amtg.ecore#//Expectation/mockobject"/>
+    </genClasses>
+    <genClasses ecoreClass="amtg.ecore#//RealObject">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute amtg.ecore#//RealObject/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute amtg.ecore#//RealObject/type"/>
+    </genClasses>
+    <genClasses ecoreClass="amtg.ecore#//FunctionCall">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute amtg.ecore#//FunctionCall/methodName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference amtg.ecore#//FunctionCall/argument"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference amtg.ecore#//FunctionCall/realobject"/>
+    </genClasses>
+    <genClasses ecoreClass="amtg.ecore#//Argument">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute amtg.ecore#//Argument/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute amtg.ecore#//Argument/value"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

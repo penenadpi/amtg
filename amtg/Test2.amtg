@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<amtg:TestCase xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:amtg="http://www.example.org/amtg" name="CarTest">
+  <testmethod name="CanGo">
+    <mockobject name="vision" type="MockVision"/>
+    <mockobject name="engine" type="MockEngine"/>
+    <expectation type="Times" parameter="3" methodName="FindObstacle" mockobject="//@testmethod.0/@mockobject.0"/>
+    <expectation type="Times" parameter="3" methodName="CountPeople" mockobject="//@testmethod.0/@mockobject.0"/>
+    <functioncall methodName="Go" realobject="//@testmethod.0/@realobject.0"/>
+    <realobject name="car" type="Car"/>
+  </testmethod>
+</amtg:TestCase>
